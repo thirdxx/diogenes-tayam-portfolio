@@ -18,7 +18,6 @@ const Skills = () => {
         { name: "C++", level: 70, icon: "➕" },
         { name: "Python", level: 80, icon: "�" },
         { name: "MySQL", level: 85, icon: "🗄️" },
-        { name: "NoSQL", level: 75, icon: "🍃" },
       ],
     },
     {
