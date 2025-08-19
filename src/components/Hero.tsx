@@ -68,6 +68,8 @@ const Hero = () => {
                   2000,
                   "Flutter Developer",
                   2000,
+                  "UI/UX Designer",
+                  2000,
                 ]}
                 wrapper="span"
                 speed={50}
