@@ -21,6 +21,7 @@ export default defineConfig(({ mode }) => ({
       external: [], 
     },
   },
+  publicDir: 'public',
   optimizeDeps: {
     include: ['markdown-it'],
   },
