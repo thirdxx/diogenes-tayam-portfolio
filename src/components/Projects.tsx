@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import MarkdownIt from "markdown-it";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -13,6 +14,8 @@ import project1 from "@/assets/busas.png";
 import project2 from "@/assets/parental.jpg";
 import project3 from "@/assets/queery.png";
 import project4 from "@/assets/voghami.jpg";
+
+const md = new MarkdownIt();
 
 const Projects = () => {
   const projects = [
@@ -140,9 +143,12 @@ const Projects = () => {
                         <h3 className="text-2xl lg:text-3xl font-bold mb-4">
                           {project.title}
                         </h3>
-                        <p className="text-muted-foreground leading-relaxed text-lg">
-                          {project.description}
-                        </p>
+                        <div
+                          className="text-muted-foreground leading-relaxed text-lg"
+                          dangerouslySetInnerHTML={{
+                            __html: md.render(project.description),
+                          }}
+                        />
                       </div>
 
                       <div>
