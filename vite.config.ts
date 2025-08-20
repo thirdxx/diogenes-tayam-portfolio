@@ -16,10 +16,19 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-   build: {
+  build: {
     rollupOptions: {
-      external: [], 
+      external: [],
+      output: {
+        entryFileNames: 'assets/[name]-[hash].js',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]',
+        format: 'es'
+      }
     },
+    assetsDir: 'assets',
+    outDir: 'dist',
+    target: 'es2015'
   },
   publicDir: 'public',
   optimizeDeps: {
