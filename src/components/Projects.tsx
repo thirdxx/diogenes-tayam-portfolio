@@ -16,6 +16,7 @@ import project3 from "@/assets/queery.png";
 import project4 from "@/assets/voghami.jpg";
 
 const md = new MarkdownIt();
+const html = md.render('# Hello World');
 
 const Projects = () => {
   const projects = [
